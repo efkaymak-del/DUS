@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUS 2026 Hazırlık</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 font-sans min-h-screen">
+
+  <!-- TOP BAR -->
+  <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl">🦷</span>
+        <span class="font-bold text-lg">DUS 2026</span>
+      </div>
+      <div class="text-amber-400 text-sm font-semibold" id="countdown"></div>
+    </div>
+    <!-- Tab Navigation -->
+    <div class="max-w-5xl mx-auto px-4 flex gap-1 overflow-x-auto pb-1 text-sm" id="tabs">
+      <button class="tab active" data-tab="home">📊 Genel</button>
+      <button class="tab" data-tab="study">📚 Konu Özeti</button>
+      <button class="tab" data-tab="exam">📝 Deneme</button>
+      <button class="tab" data-tab="cards">🃏 Kartlar</button>
+      <button class="tab" data-tab="calc">🧮 Hesapla</button>
+      <button class="tab" data-tab="links">🔗 Linkler</button>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-4 py-6">
+
+    <!-- HOME -->
+    <section id="page-home" class="page">
+      <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-6 md:p-8 text-white mb-6">
+        <p class="text-amber-400 text-xs font-semibold uppercase tracking-wider mb-2">2026 DUS 1. Dönem</p>
+        <h1 class="text-2xl md:text-3xl font-extrabold mb-3">26 Nisan 2026, Pazar</h1>
+        <p class="text-slate-300 text-sm mb-5 max-w-lg">120 soru (40 Temel + 80 Klinik) · 150 dakika · 5 şıklı · Net = Doğru − Yanlış/4 · Başvuru ücreti: 2.500₺</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div class="bg-white/10 rounded-xl p-3"><div class="text-xl font-bold" id="days-left">—</div><div class="text-xs text-white/60">Gün Kaldı</div></div>
+          <div class="bg-white/10 rounded-xl p-3"><div class="text-xl font-bold">120</div><div class="text-xs text-white/60">Soru</div></div>
+          <div class="bg-white/10 rounded-xl p-3"><div class="text-xl font-bold">9</div><div class="text-xs text-white/60">Uzmanlık Dalı</div></div>
+          <div class="bg-white/10 rounded-xl p-3"><div class="text-xl font-bold">~700</div><div class="text-xs text-white/60">Kontenjan</div></div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-white rounded-xl p-5 border border-slate-200">
+          <h3 class="font-bold text-slate-800 mb-3">📅 2026 Takvimi</h3>
+          <table class="w-full text-sm">
+            <tr class="border-b"><td class="py-2 text-slate-500">1. Dönem Sınav</td><td class="py-2 font-semibold text-right">26 Nisan 2026</td></tr>
+            <tr class="border-b"><td class="py-2 text-slate-500">1. Dönem Sonuç</td><td class="py-2 text-right">22 Mayıs 2026</td></tr>
+            <tr class="border-b"><td class="py-2 text-slate-500">2. Dönem Sınav</td><td class="py-2 font-semibold text-right">1 Kasım 2026</td></tr>
+            <tr class="border-b"><td class="py-2 text-slate-500">2. Dönem Başvuru</td><td class="py-2 text-right">16-24 Eylül 2026</td></tr>
+            <tr><td class="py-2 text-slate-500">2. Dönem Sonuç</td><td class="py-2 text-right">26 Kasım 2026</td></tr>
+          </table>
+          <p class="text-xs text-amber-600 mt-3">⚠️ 2026'da istisnai olarak iki dönem yapılacak.</p>
+        </div>
+        <div class="bg-white rounded-xl p-5 border border-slate-200">
+          <h3 class="font-bold text-slate-800 mb-3">🎯 Rekabet Düzeyi (2025 Ref.)</h3>
+          <div class="space-y-2 text-sm">
+            <div class="flex justify-between"><span>🔴 Ortodonti</span><span class="font-semibold">160+ net</span></div>
+            <div class="flex justify-between"><span>🔴 Endodonti</span><span class="font-semibold">160+ net</span></div>
+            <div class="flex justify-between"><span>🔴 Periodontoloji</span><span class="font-semibold">160+ net</span></div>
+            <div class="flex justify-between"><span>🟡 Cerrahi</span><span class="font-semibold">130-160</span></div>
+            <div class="flex justify-between"><span>🟡 Pedodonti</span><span class="font-semibold">130-160</span></div>
+            <div class="flex justify-between"><span>🟡 Protetik</span><span class="font-semibold">130-160</span></div>
+            <div class="flex justify-between"><span>🟢 Radyoloji</span><span class="font-semibold">120-140</span></div>
+            <div class="flex justify-between"><span>🟢 Restoratif</span><span class="font-semibold">120-140</span></div>
+            <div class="flex justify-between"><span>🟢 Oral Patoloji</span><span class="font-semibold">120-140</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl p-5 border border-slate-200">
+        <h3 class="font-bold text-slate-800 mb-3">📊 Soru Dağılımı (120 Soru)</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+          <div class="bg-blue-50 rounded-lg p-3 text-center"><div class="font-bold text-blue-700">6</div><div class="text-xs text-blue-600">Anatomi</div></div>
+          <div class="bg-purple-50 rounded-lg p-3 text-center"><div class="font-bold text-purple-700">4</div><div class="text-xs text-purple-600">Histoloji</div></div>
+          <div class="bg-cyan-50 rounded-lg p-3 text-center"><div class="font-bold text-cyan-700">6</div><div class="text-xs text-cyan-600">Fizyoloji</div></div>
+          <div class="bg-teal-50 rounded-lg p-3 text-center"><div class="font-bold text-teal-700">6</div><div class="text-xs text-teal-600">Biyokimya</div></div>
+          <div class="bg-green-50 rounded-lg p-3 text-center"><div class="font-bold text-green-700">6</div><div class="text-xs text-green-600">Mikrobiyoloji</div></div>
+          <div class="bg-pink-50 rounded-lg p-3 text-center"><div class="font-bold text-pink-700">4</div><div class="text-xs text-pink-600">Patoloji</div></div>
+          <div class="bg-orange-50 rounded-lg p-3 text-center"><div class="font-bold text-orange-700">4</div><div class="text-xs text-orange-600">Farmakoloji</div></div>
+          <div class="bg-indigo-50 rounded-lg p-3 text-center"><div class="font-bold text-indigo-700">4</div><div class="text-xs text-indigo-600">Biyoloji/Gen.</div></div>
+        </div>
+        <div class="mt-3 bg-slate-100 rounded-lg p-3 text-center">
+          <span class="font-bold text-slate-700">80 Klinik Bilimler:</span>
+          <span class="text-sm text-slate-600"> Endodonti, Perio, Pedodonti, Protetik, Cerrahi, Ortodonti, Restoratif, Radyoloji, Ağız Hast.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDY -->
+    <section id="page-study" class="page hidden">
+      <h2 class="text-xl font-bold text-slate-800 mb-1">📚 Konu Özeti — Hap Bilgiler</h2>
+      <p class="text-slate-500 text-sm mb-4">Sık çıkan konuların özetleri. Başlığa tıklayarak aç/kapat.</p>
+      <div class="flex gap-2 mb-4">
+        <button class="study-tab active text-sm font-semibold px-4 py-2 rounded-lg" data-section="temel">🔬 Temel (40)</button>
+        <button class="study-tab text-sm font-semibold px-4 py-2 rounded-lg bg-slate-100 text-slate-500" data-section="klinik">🏥 Klinik (80)</button>
+      </div>
+      <div id="study-temel"></div>
+      <div id="study-klinik" class="hidden"></div>
+    </section>
+
+    <!-- EXAM -->
+    <section id="page-exam" class="page hidden">
+      <div id="exam-start">
+        <h2 class="text-xl font-bold text-slate-800 mb-1">📝 Deneme Sınavı</h2>
+        <p class="text-slate-500 text-sm mb-6">40 Temel + 80 Klinik = 120 soru · Zamanlayıcılı veya süresiz</p>
+        <div class="bg-white rounded-xl p-8 border border-slate-200 text-center max-w-md mx-auto">
+          <div class="text-5xl mb-3">📝</div>
+          <p class="text-slate-600 text-sm mb-5">Net = Doğru − (Yanlış ÷ 4) · Boş sayılmaz</p>
+          <button onclick="startExam(true)" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 rounded-xl mb-2 text-sm">🚀 Başlat (150 dk zamanlayıcı)</button>
+          <button onclick="startExam(false)" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium py-3 rounded-xl text-sm">⏱️ Süresiz Çöz</button>
+        </div>
+      </div>
+      <div id="exam-active" class="hidden"></div>
+      <div id="exam-results" class="hidden"></div>
+    </section>
+
+    <!-- FLASHCARDS -->
+    <section id="page-cards" class="page hidden">
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+        <h2 class="text-xl font-bold text-slate-800">🃏 Flashcards <span class="text-sm font-normal text-slate-400" id="fc-pos">1/20</span></h2>
+        <div class="flex gap-2">
+          <select id="fc-filter" onchange="fcFilter()" class="border rounded-lg px-2 py-1.5 text-sm bg-white">
+            <option value="all">Tüm Dallar</option>
+            <option value="Endodonti">Endodonti</option><option value="Periodontoloji">Perio</option><option value="Cerrahi">Cerrahi</option><option value="Protetik">Protetik</option><option value="Ortodonti">Ortodonti</option><option value="Farmakoloji">Farmakoloji</option><option value="Anatomi">Anatomi</option><option value="Histoloji">Histoloji</option><option value="Pedodonti">Pedodonti</option><option value="Radyoloji">Radyoloji</option>
+          </select>
+          <button onclick="fcShuffle()" class="bg-slate-800 text-white px-3 py-1.5 rounded-lg text-sm">🔀</button>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 gap-3 mb-4 text-center text-sm">
+        <div class="bg-green-50 border border-green-200 rounded-lg p-2"><span class="font-bold text-green-600" id="fc-ok">0</span> ✅</div>
+        <div class="bg-orange-50 border border-orange-200 rounded-lg p-2"><span class="font-bold text-orange-600" id="fc-re">0</span> 🔄</div>
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-2"><span class="font-bold text-blue-600" id="fc-left">20</span> 📋</div>
+      </div>
+      <div class="flip-container max-w-xl mx-auto mb-4">
+        <div class="flip-card" id="flip-card" onclick="fcFlip()">
+          <div class="flip-front bg-gradient-to-br from-slate-700 to-slate-900 text-white rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-lg">
+            <div class="text-xs text-white/50 uppercase tracking-wider mb-3" id="fc-cat">Kategori</div>
+            <div class="text-lg font-bold leading-relaxed" id="fc-q">Yükleniyor...</div>
+            <div class="text-xs text-white/40 mt-4">tıkla → çevir</div>
+          </div>
+          <div class="flip-back bg-gradient-to-br from-amber-500 to-orange-600 text-white rounded-2xl p-6 flex flex-col items-center justify-center text-center shadow-lg">
+            <div class="text-xs uppercase tracking-wider mb-3 text-white/70">Cevap</div>
+            <div class="text-sm leading-relaxed" id="fc-a">...</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-3 mb-3">
+        <button onclick="fcPrev()" class="bg-white border rounded-lg px-4 py-2 text-sm">←</button>
+        <button onclick="fcNext()" class="bg-white border rounded-lg px-4 py-2 text-sm">→</button>
+      </div>
+      <div class="flex justify-center gap-3">
+        <button onclick="fcMark('ok')" class="bg-green-500 text-white px-5 py-2.5 rounded-xl text-sm font-bold">✅ Biliyorum</button>
+        <button onclick="fcMark('re')" class="bg-orange-500 text-white px-5 py-2.5 rounded-xl text-sm font-bold">🔄 Tekrar</button>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section id="page-calc" class="page hidden">
+      <h2 class="text-xl font-bold text-slate-800 mb-1">🧮 Puan Hesaplayıcı</h2>
+      <p class="text-slate-500 text-sm mb-4">Net = Doğru − (Yanlış ÷ 4) · Temel: 40 soru · Klinik: 80 soru</p>
+      <div class="grid md:grid-cols-2 gap-4 mb-4">
+        <div class="bg-white rounded-xl p-5 border">
+          <h3 class="font-bold text-sm mb-3">🔬 Temel Bilimler (40)</h3>
+          <label class="text-xs text-slate-500">Doğru</label>
+          <input type="number" id="c-td" min="0" max="40" placeholder="0" oninput="calc()" class="w-full border rounded-lg px-3 py-2 mb-2 font-semibold">
+          <label class="text-xs text-slate-500">Yanlış</label>
+          <input type="number" id="c-ty" min="0" max="40" placeholder="0" oninput="calc()" class="w-full border rounded-lg px-3 py-2 font-semibold">
+        </div>
+        <div class="bg-white rounded-xl p-5 border">
+          <h3 class="font-bold text-sm mb-3">🏥 Klinik Bilimler (80)</h3>
+          <label class="text-xs text-slate-500">Doğru</label>
+          <input type="number" id="c-kd" min="0" max="80" placeholder="0" oninput="calc()" class="w-full border rounded-lg px-3 py-2 mb-2 font-semibold">
+          <label class="text-xs text-slate-500">Yanlış</label>
+          <input type="number" id="c-ky" min="0" max="80" placeholder="0" oninput="calc()" class="w-full border rounded-lg px-3 py-2 font-semibold">
+        </div>
+      </div>
+      <div id="calc-out" class="hidden">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+          <div class="bg-white rounded-xl p-4 border text-center"><div class="text-2xl font-bold text-blue-600" id="r-tn">-</div><div class="text-xs text-slate-500">Temel Net</div></div>
+          <div class="bg-white rounded-xl p-4 border text-center"><div class="text-2xl font-bold text-green-600" id="r-kn">-</div><div class="text-xs text-slate-500">Klinik Net</div></div>
+          <div class="bg-white rounded-xl p-4 border text-center"><div class="text-2xl font-bold text-purple-600" id="r-tot">-</div><div class="text-xs text-slate-500">Toplam Net</div></div>
+          <div class="bg-white rounded-xl p-4 border text-center"><div class="text-2xl font-bold text-amber-600" id="r-place">-</div><div class="text-xs text-slate-500">Yerleşme Tahmini</div></div>
+        </div>
+        <div class="bg-white rounded-xl p-4 border">
+          <div class="h-3 bg-slate-100 rounded-full overflow-hidden"><div class="h-full rounded-full transition-all duration-500" id="r-bar" style="width:0%;background:linear-gradient(90deg,#ef4444,#f59e0b,#22c55e)"></div></div>
+          <div class="flex justify-between text-xs text-slate-400 mt-1"><span>0</span><span>30</span><span>60</span><span>90</span><span>120</span></div>
+          <p class="text-sm text-slate-600 mt-3" id="r-msg"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section id="page-links" class="page hidden">
+      <h2 class="text-xl font-bold text-slate-800 mb-4">🔗 Faydalı Linkler</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="bg-white rounded-xl p-5 border">
+          <h3 class="font-bold text-sm mb-3">🏛️ ÖSYM Resmi</h3>
+          <div class="space-y-2 text-sm">
+            <a href="https://www.osym.gov.tr/TR,33907/2026-dus-1-donem-kilavuz-ve-basvuru-bilgileri.html" target="_blank" class="text-blue-600 underline block">2026 DUS 1. Dönem Kılavuz</a>
+            <a href="https://www.osym.gov.tr/tr,8797/takvim.html" target="_blank" class="text-blue-600 underline block">ÖSYM 2026 Sınav Takvimi</a>
+            <a href="https://ais.osym.gov.tr" target="_blank" class="text-blue-600 underline block">Aday İşlemleri Sistemi (AİS)</a>
+            <a href="https://www.osym.gov.tr/TR,15070/dus-cikmis-sorular.html" target="_blank" class="text-blue-600 underline block">DUS Çıkmış Sorular (Tüm Yıllar)</a>
+            <a href="https://www.osym.gov.tr/TR,33160/2025-dus-1-donem-sinavi-ile-2025-sts-dis-hekimligi-1-donem-sinavi-temel-soru-kitapciklari-ve-cevap-anahtarlari-yayimlandi-20042025.html" target="_blank" class="text-blue-600 underline block">2025 DUS 1. Dönem Soru Kitapçıkları</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-5 border">
+          <h3 class="font-bold text-sm mb-3">🦷 Kuruluşlar</h3>
+          <div class="space-y-2 text-sm">
+            <a href="https://www.tdb.org.tr" target="_blank" class="text-blue-600 underline block">Türk Diş Hekimleri Birliği</a>
+            <a href="https://www.yok.gov.tr" target="_blank" class="text-blue-600 underline block">Yükseköğretim Kurulu (YÖK)</a>
+            <a href="https://www.saglik.gov.tr" target="_blank" class="text-blue-600 underline block">Sağlık Bakanlığı</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-5 border">
+          <h3 class="font-bold text-sm mb-3">📖 Hazırlık Araçları</h3>
+          <div class="space-y-2 text-sm">
+            <a href="https://rehberpanda.com/rehberler/dus/konu-dagilimi/" target="_blank" class="text-blue-600 underline block">DUS Konu Dağılımı Detaylı</a>
+            <a href="https://rehberpanda.com/araclar/cikmis-sorular/dus/" target="_blank" class="text-blue-600 underline block">Çıkmış Sorular PDF Arşivi</a>
+            <a href="https://dus-puan.hesaplama.net/" target="_blank" class="text-blue-600 underline block">Online Puan Hesaplama</a>
+            <a href="https://rehberpanda.com/araclar/taban-puanlari/dus/uzmanlik/" target="_blank" class="text-blue-600 underline block">Taban Puanları ve Sıralamaları</a>
+            <a href="https://tuskocu.com/osym-dus-kontenjanlari/" target="_blank" class="text-blue-600 underline block">DUS Kontenjan Listesi</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl p-5 border">
+          <h3 class="font-bold text-sm mb-3">📚 Hazırlık Kursları</h3>
+          <div class="space-y-2 text-sm">
+            <a href="https://www.dusdata.com" target="_blank" class="text-blue-600 underline block">DUSDATA</a>
+            <a href="https://dustime.com" target="_blank" class="text-blue-600 underline block">DUSTİME</a>
+            <a href="https://www.nettekurs.com" target="_blank" class="text-blue-600 underline block">Nettekurs</a>
+            <a href="https://dusmer.com" target="_blank" class="text-blue-600 underline block">DUSMER</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-xs text-slate-400 py-6 border-t bg-white mt-8">
+    DUS 2026 Hazırlık · Resmi kaynak: <a href="https://www.osym.gov.tr" target="_blank" class="text-blue-500 underline">osym.gov.tr</a> · Bu platform ÖSYM ile bağlantılı değildir.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
